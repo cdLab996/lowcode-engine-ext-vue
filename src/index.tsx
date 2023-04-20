@@ -229,10 +229,11 @@ const engineExt = {
     VariableBindDialog,
   },
 };
+engineExt.name = packagesInfo.name;
 engineExt.version = packagesInfo.version;
 window.AliLowCodeEngineExt = engineExt;
 console.log(
-  '%c AliLowCodeExt %c v'.concat(engineExt.version, ' '),
+  `%c ${engineExt.name} %c v`.concat(engineExt.version, ' '),
   'padding: 2px 1px; border-radius: 3px 0 0 3px; color: #fff; background: #5584ff; font-weight: bold;',
   'padding: 2px 1px; border-radius: 0 3px 3px 0; color: #fff; background: #42c02e; font-weight: bold;',
 );

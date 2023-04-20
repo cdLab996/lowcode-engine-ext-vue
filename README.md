@@ -1,60 +1,66 @@
-### @alilc/lowcode-engine-ext
+# @cdlab996/lowcode-engine-ext-vue
 
-### 简介
-lowcode-engine-ext 是阿里低代码引擎官方提供的 setter 和 setter 必须依赖的插件集合
+[![NPM](https://nodei.co/npm/@cdlab996/lowcode-engine-ext-vue.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/@cdlab996/lowcode-engine-ext-vue/)
 
-setter(设置器) 是用来展示每个物料的属性，[setter使用说明手册](https://www.yuque.com/lce/doc/cl03wo_nmhznb) [官方setter列表说明](https://www.yuque.com/lce/doc/oc220p#fl46)
+[![npm version](https://img.shields.io/npm/v/@cdlab996/lowcode-engine-ext.svg)](https://www.npmjs.com/package/@cdlab996/lowcode-engine-ext-vue)
+[![npm downloads](https://img.shields.io/npm/dm/@cdlab996/lowcode-engine-ext.svg)](https://www.npmjs.com/package/@cdlab996/lowcode-engine-ext-vue)
+[![GitHub license](https://img.shields.io/github/license/@cdlab996/lowcode-engine-ext-vue)](https://github.com/cdlab996/lowcode-engine-ext-vue/blob/main/LICENSE)
 
-### 使用方式
+## Synopsis
 
-使用 CDN 方式引用，下方是官方提供的两个稳定 CDN
+- 更多请查看官网: [href](https://lowcode-engine.cn/site/docs/guide/appendix/setters)
 
-#### 方式 1：alifd cdn
- 1: alifd cdn
+- **与 [lowcode-engine-ext](https://github.com/alibaba/lowcode-engine-ext) 不同点在于，对 Vue 进行适配**
+
+<!-- See more at [Official setter](https://lowcode-engine.cn/site/docs/guide/appendix/setters) -->
+
+<!-- **The difference with [lowcode-engine-ext](https://github.com/alibaba/lowcode-engine-ext) is that the adaptation to Vue.** -->
+
+## use
+
+### npm
+
+```bash
+npm install @cdlab996/lowcode-engine-ext-vue
+```
+
+### cdn
+
+<!-- https://unpkg.com/browse/@cdlab996/lowcode-engine-ext-vue@1.0.1/ -->
+<!-- https://unpkg.com/browse/@cdlab996/lowcode-engine-ext@latest/ -->
+
 ```html
-https://alifd.alicdn.com/npm/@alilc/lowcode-engine-ext@1.0.5/dist/css/engine-ext.css
+https://unpkg.com/browse/@cdlab996/lowcode-engine-ext-vue@latest/dist/css/engine-ext.css
 
-https://alifd.alicdn.com/npm/@alilc/lowcode-engine-ext@1.0.5/dist/js/engine-ext.js
+https://unpkg.com/browse/@cdlab996/lowcode-engine-ext-vue@latest/dist/js/engine-ext.js
 ```
 
-#### 方式 2: uipaas cdn
-```html
-https://uipaas-assets.com/prod/npm/@alilc/lowcode-engine-ext/1.0.5/dist/css/engine-ext.css
+## Local
 
-https://uipaas-assets.com/prod/npm/@alilc/lowcode-engine-ext/1.0.5/dist/js/engine-ext.js
+``` bash
+git clone https://github.com/cdLab996/lowcode-engine-ext-vue.git
+cd lowcode-engine-vue
+npm install
+npm run start
 ```
 
-#### 拓展变量绑定面板
+- XSwitch
 
-通过传入extraDataMap拓展属性绑定面板
-
-```typescript
-ctx.skeleton.add({
-  area: 'centerArea',
-  type: 'Widget',
-  content: pluginMap.VariableBindDialog,
-  name: 'variableBindDialog',
-  props: {
-    getSchema: () => editorController.getSchema(),
-    // 拓展变量绑定
-    extraDataMap: {
-      props: {
-        name: 'Props', // 变量组展示名
-        key: 'props', // 属性名，例如 this.props
-        getChildren: () => [
-          {
-            label: 'prop1',
-            value: 'value1',
-          },
-          {
-            label: 'prop2',
-            children: [
-              { label: 'propxxx', value: 1 }
-            ]
-          }
-        ],
-      }
-    }
-  },
-});
+```json
+{
+  "proxy": [
+    [
+      "https://alifd.alicdn.com/npm/@alilc/lowcode-engine-ext@1.0.5/dist/css/engine-ext.css",
+      "http://localhost:4008/js/engine-ext.css"
+    ],
+    [
+      "https://alifd.alicdn.com/npm/@alilc/lowcode-engine-ext@1.0.5/dist/css/engine-ext.js",
+      "http://localhost:4008/js/engine-ext.js"
+    ]
+  ]
+}
 ```
+
+## 🎈 License
+
+This is a fork from [lowcode-engine-ext](https://github.com/alibaba/lowcode-engine-ext)

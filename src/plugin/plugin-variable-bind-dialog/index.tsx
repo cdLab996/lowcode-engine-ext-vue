@@ -8,7 +8,7 @@ import './index.less';
 const HelpText = `你可以通过点击左侧区域绑定变量或处理函数，当然你也可以在上方输入复杂的表达式。
 输入框内默认支持变量，写法和 JS 写法完全一致。<br>
 this: '容器上下文对象'<br>
-state: '容器的state'<br>
+state: '容器的state' (vue 适配, 使用 this.xxx 访问数据)<br>
 props: '容器的props'<br>
 context: '容器的context'<br>
 schema: '页面上下文对象'<br>
@@ -470,7 +470,12 @@ export default class VariableBindDialog extends Component<PluginProps> {
     let selectLabel;
     if (selParentVariable == 'stateVaroableList'){
       const pathList = this.treeFindPath(childrenVariableList,data=>(data.key==key),'label');
-      selectLabel = `this.state.${pathList.join('.')}`
+      // selectLabel = `this.state.${pathList.join('.')}`
+      /**
+       * TODO: 这里适配 vue
+       * 在 vue 中, this.state.xxx 会报错, 所以这里需要修改为 this.xxx
+       */
+      selectLabel = `this.${pathList.join('.')}`
     }else if (selParentVariable == 'methods'){
       selectLabel = `${label}()`;
     }else if (selParentVariable == 'dataSource'){
@@ -483,7 +488,7 @@ export default class VariableBindDialog extends Component<PluginProps> {
         selectLabel = `this.${propKey}.${pathList.join('.')}`;
       }
     }
-    this.onSelectItem(selectLabel);
+    selectLabel && this.onSelectItem(selectLabel);
   }
 
 
