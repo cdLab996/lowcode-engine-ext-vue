@@ -30,7 +30,7 @@ npm install @cdlab996/lowcode-engine-ext-vue
 <!-- https://unpkg.com/browse/@cdlab996/lowcode-engine-ext@latest/ -->
 
 ```html
-https://unpkg.com/@cdlab996/lowcode-engine-ext-vue@latest/dist/js/engine-ext.css
+https://unpkg.com/@cdlab996/lowcode-engine-ext-vue@latest/dist/css/engine-ext.css
 
 https://unpkg.com/@cdlab996/lowcode-engine-ext-vue@latest/dist/js/engine-ext.js
 ```
