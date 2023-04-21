@@ -2,9 +2,9 @@
 
 [![NPM](https://nodei.co/npm/@cdlab996/lowcode-engine-ext-vue.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/@cdlab996/lowcode-engine-ext-vue/)
 
-[![npm version](https://img.shields.io/npm/v/@cdlab996/lowcode-engine-ext.svg)](https://www.npmjs.com/package/@cdlab996/lowcode-engine-ext-vue)
-[![npm downloads](https://img.shields.io/npm/dm/@cdlab996/lowcode-engine-ext.svg)](https://www.npmjs.com/package/@cdlab996/lowcode-engine-ext-vue)
-[![GitHub license](https://img.shields.io/github/license/@cdlab996/lowcode-engine-ext-vue)](https://github.com/cdlab996/lowcode-engine-ext-vue/blob/main/LICENSE)
+[![npm version](https://img.shields.io/npm/v/@cdlab996/lowcode-engine-ext-vue.svg)](https://www.npmjs.com/package/@cdlab996/lowcode-engine-ext-vue)
+[![npm downloads](https://img.shields.io/npm/dm/@cdlab996/lowcode-engine-ext-vue.svg)](https://www.npmjs.com/package/@cdlab996/lowcode-engine-ext-vue)
+[![GitHub license](https://img.shields.io/github/license/cdLab996/lowcode-engine-ext-vue)](https://github.com/cdLab996/lowcode-engine-ext-vue/blob/main/LICENSE)
 
 ## Synopsis
 
