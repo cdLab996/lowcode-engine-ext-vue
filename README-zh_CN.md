@@ -6,13 +6,17 @@
 [![npm downloads](https://img.shields.io/npm/dm/@cdlab996/lowcode-engine-ext-vue.svg)](https://www.npmjs.com/package/@cdlab996/lowcode-engine-ext-vue)
 [![GitHub license](https://img.shields.io/github/license/cdLab996/lowcode-engine-ext-vue)](https://github.com/cdLab996/lowcode-engine-ext-vue/blob/main/LICENSE)
 
-## Description
+## 概要
 
-- For more information, please visit the official website: [href](https://lowcode-engine.cn/site/docs/guide/appendix/setters)
+- 更多请查看官网: [href](https://lowcode-engine.cn/site/docs/guide/appendix/setters)
 
-- **The difference with [lowcode-engine-ext](https://github.com/alibaba/lowcode-engine-ext) is that it adapts to Vue.**
+- **与 [lowcode-engine-ext](https://github.com/alibaba/lowcode-engine-ext) 不同点在于，对 Vue 进行适配**
 
-## Usage
+<!-- See more at [Official setter](https://lowcode-engine.cn/site/docs/guide/appendix/setters) -->
+
+<!-- **The difference with [lowcode-engine-ext](https://github.com/alibaba/lowcode-engine-ext) is that the adaptation to Vue.** -->
+
+## 使用方法
 
 ### npm
 
@@ -31,9 +35,9 @@ https://unpkg.com/@cdlab996/lowcode-engine-ext-vue@latest/dist/css/engine-ext.cs
 https://unpkg.com/@cdlab996/lowcode-engine-ext-vue@latest/dist/js/engine-ext.js
 ```
 
-## Local Usage
+## 本地使用
 
-```bash
+``` bash
 git clone https://github.com/cdLab996/lowcode-engine-ext-vue.git
 cd lowcode-engine-vue
 npm install
@@ -57,6 +61,6 @@ npm run start
 }
 ```
 
-## 🎈 License
+## 🎈 版权声明
 
-This project is a branch of [lowcode-engine-ext](https://github.com/alibaba/lowcode-engine-ext).
+该项目是 [lowcode-engine-ext](https://github.com/alibaba/lowcode-engine-ext) 的一个分支。
