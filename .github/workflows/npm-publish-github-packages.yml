@@ -4,6 +4,9 @@
 name: Package Publish
 
 on:
+  push:
+    tags:
+      - "v*.*.*"
   release:
     types: [created]
 
@@ -31,7 +34,7 @@ jobs:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
       - run: |
-          VERSION=$(jq -r '.version' ../../package.json)
+          VERSION=$(jq -r 'version' ../../package.json)
           if [[ "$VERSION" == *-beta* ]]; then
             npm publish --tag beta
           else
