@@ -8,9 +8,9 @@ import './index.less';
 const HelpText = `你可以通过点击左侧区域绑定变量或处理函数，当然你也可以在上方输入复杂的表达式。
 输入框内默认支持变量，写法和 JS 写法完全一致。<br>
 this: '容器上下文对象'<br>
-state: '容器的state' (vue 适配, 使用 this.xxx 访问数据)<br>
-props: '容器的props'<br>
-context: '容器的context'<br>
+data: '容器的 data' (使用 this.xxx/ this.$data.xxx 访问数据)<br>
+props: '容器的 props' (使用 this.xxx/ this.$props.xxx 访问数据)<br>
+context: '容器的 context'<br>
 schema: '页面上下文对象'<br>
 component: '组件上下文对象'<br>
 constants: '应用常量对象'<br>
@@ -472,14 +472,19 @@ export default class VariableBindDialog extends Component<PluginProps> {
       const pathList = this.treeFindPath(childrenVariableList,data=>(data.key==key),'label');
       // selectLabel = `this.state.${pathList.join('.')}`
       /**
-       * TODO: 这里适配 vue
-       * 在 vue 中, this.state.xxx 会报错, 所以这里需要修改为 this.xxx
+       * NOTE: 为了兼容 Vue 框架，使用 this.xxx 代替 this.state.xxx
+       * 在 Vue 中访问 this.state.xxx 会导致语法错误
        */
       selectLabel = `this.${pathList.join('.')}`
     }else if (selParentVariable == 'methods'){
       selectLabel = `${label}()`;
     }else if (selParentVariable == 'dataSource'){
-      selectLabel = `this.state.${label}`
+      // selectLabel = `this.state.${label}`
+      /**
+       * NOTE: 为了兼容 Vue 框架，使用 this.xxx 代替 this.state.xxx
+       * 在 Vue 中访问 this.state.xxx 会导致语法错误
+       */
+      selectLabel = `this.${label}`
     } else {
       const fondKey = Object.keys(this.extraDataMap || {}).find(k => k === selParentVariable);
       if (fondKey) {
