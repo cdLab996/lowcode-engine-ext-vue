@@ -1,5 +1,9 @@
 # @cdlab996/lowcode-engine-ext-vue
 
+<!-- [![English badge](https://img.shields.io/badge/%E8%8B%B1%E6%96%87-English-blue)](./README.md)
+[![简体中文 badge](https://img.shields.io/badge/%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-Simplified%20Chinese-blue)](./README-zh_CN.md)\
+English | [简体中文](./README-zh_CN.md) -->
+
 [![NPM](https://nodei.co/npm/@cdlab996/lowcode-engine-ext-vue.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/@cdlab996/lowcode-engine-ext-vue/)
 
 [![npm version](https://img.shields.io/npm/v/@cdlab996/lowcode-engine-ext-vue.svg)](https://www.npmjs.com/package/@cdlab996/lowcode-engine-ext-vue)
