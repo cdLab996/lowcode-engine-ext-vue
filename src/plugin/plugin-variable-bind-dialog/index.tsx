@@ -146,10 +146,8 @@ export default class VariableBindDialog extends Component<PluginProps> {
         try{
           value = eval(`(${valueString})`);
         }catch(e){}
-
-        if (value){
-          dataSourceMap[key] = value;
-        }
+        // 处理 state 中的变量给了空值，如 ''、false、null、undefined 等，变量列表中不显示问题
+        dataSourceMap[key] = value;
       }
     }
     const treeList = [];
