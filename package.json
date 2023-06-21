@@ -1,6 +1,6 @@
 {
   "name": "@cdlab996/lowcode-engine-ext-vue",
-  "version": "1.0.6-beta.26.5",
+  "version": "1.0.6-beta.26.6",
   "description": "lowcode setter vue adapter",
   "files": [
     "dist",
