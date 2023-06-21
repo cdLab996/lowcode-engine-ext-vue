@@ -77,7 +77,7 @@
   "bugs": {
     "url": "https://github.com/cdLab996/lowcode-ui-cli/issues"
   },
-  "homepage": "https://unpkg.com/@cdlab996/lowcode-engine-ext-vue@1.0.6-beta.26.5/build/index.html",
+  "homepage": "https://unpkg.com/@cdlab996/lowcode-engine-ext-vue@1.0.6-beta.26.6/build/index.html",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cdLab996/lowcode-engine-ext-vue.git"
