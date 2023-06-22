@@ -165,7 +165,7 @@ const DataSlotSetter = {
   valueType: ['JSSlot'],
 };
 
-const engineExt = {
+const engineExt: any = {
   setters: {
     StringSetter,
     NumberSetter,
