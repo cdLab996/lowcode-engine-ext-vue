@@ -165,7 +165,9 @@ const DataSlotSetter = {
   valueType: ['JSSlot'],
 };
 
-const engineExt: any = {
+const engineExt = {
+  name: packagesInfo.name,
+  version: packagesInfo.version,
   setters: {
     StringSetter,
     NumberSetter,
@@ -229,9 +231,12 @@ const engineExt: any = {
     VariableBindDialog,
   },
 };
-engineExt.name = packagesInfo.name;
-engineExt.version = packagesInfo.version;
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 window.AliLowCodeEngineExt = engineExt;
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+// eslint-disable-next-line no-console
 console.log(
   `%c ${engineExt.name} %c v`.concat(engineExt.version, ' '),
   'padding: 2px 1px; border-radius: 3px 0 0 3px; color: #fff; background: #5584ff; font-weight: bold;',
