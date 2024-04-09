@@ -145,12 +145,6 @@ export default class EventBindDialog extends Component<PluginProps> {
   initEventName = (isEdit?: boolean) => {
     let eventName = this.relatedEventName;
 
-    /**
-     * 将事件名称中的短横线(_)转换为驼峰式写法
-     * 例如：onExport-change -> onExportChange
-     */
-    eventName = eventName.replace(/-(\w)/g, (_, c) => c.toUpperCase());
-
     if (!isEdit) {
       this.eventList.forEach((item) => {
         if (item.name === eventName) {

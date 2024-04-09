@@ -30,7 +30,7 @@ export default (props: IconProps) => {
         scriptUrl: ICON_URL,
       });
     }
-   
+
   }, []);
   return (
     <>{CustomIcon && <CustomIcon type={type} size={size} className={className} style={style} />}</>
