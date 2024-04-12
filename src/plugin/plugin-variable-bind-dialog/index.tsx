@@ -145,17 +145,23 @@ export default class VariableBindDialog extends Component<PluginProps> {
     const schema = this.exportSchema();
 
     const stateMap = schema.componentsTree[0]?.state;
-    const dataSourceMap = {};
+    const dataSourceMap: any = {};
     const dataSource = [];
 
     for (const key in stateMap) {
       if (Object.prototype.hasOwnProperty.call(stateMap, key) && key) {
         dataSource.push(`this.state.${key}`);
-        const valueString = stateMap[key].value;
+        let valueString = stateMap[key];
         let value;
+
         try {
+          valueString = JSON.stringify(valueString);
+          // eslint-disable-next-line no-eval
           value = eval(`(${valueString})`);
-        } catch (e) {}
+        } catch (e) {
+          // console.error(`Error evaluating valueString: ${e}`);
+          value = valueString;
+        }
 
         // 属性为false 或者 为"" 也显示到dialog中
         if (value || value === false || value === '') {
